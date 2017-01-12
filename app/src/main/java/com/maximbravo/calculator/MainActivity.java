@@ -79,9 +79,8 @@ public class MainActivity extends AppCompatActivity {
     public void putIntoListView(String resultText){
         ArrayList<String> stringList = getArrayListFrom(resultText.toLowerCase());
         if(stringList.size() != 0){
-            ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+            SimpleAdapter arrayAdapter = new SimpleAdapter(
                     this,
-                    android.R.layout.simple_list_item_1,
                     stringList );
 
             listView.setAdapter(arrayAdapter);
